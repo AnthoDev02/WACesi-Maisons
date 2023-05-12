@@ -4,13 +4,13 @@
     {
         public string Nom { get; set; }
         public string Score { get; set; }
-        public string logo { get; set; }
+        public string Logo { get; set; }
         
-        public Promo(string Nom, string Score, string logo)
+        public Promo(string nom, string score, string logo)
         {
-            this.Nom = Nom;
-            this.Score = Score;
-            this.logo = logo;
+            this.Nom = nom;
+            this.Score = score;
+            this.Logo = logo;
         }
     }
 }
