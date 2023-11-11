@@ -5,7 +5,6 @@ using WACesi_Maisons.repository;
 namespace WACesi_Maisons.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class PromosController : ControllerBase
     {
         private readonly IPromoRepository _promoRepository;
@@ -13,16 +12,16 @@ namespace WACesi_Maisons.Controllers
             _promoRepository = promoRepository;
         }
 
-        [HttpGet]
-        public ActionResult Get()
+        [HttpGet("allPromos")]
+        public ActionResult AllPromos()
         {
             List<Promo> allPromos = _promoRepository.GetAllPromos();
 
-            if (allPromos != null)
+            if (allPromos.Count > 0)
             {
                 return Ok(allPromos);
             }
-            return NoContent();
+            return NotFound();
         }
     }
 }

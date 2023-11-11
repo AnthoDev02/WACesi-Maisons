@@ -1,28 +1,48 @@
-﻿using WACesi_Maisons.Models;
+﻿using MySql.Data.MySqlClient;
+using WACesi_Maisons.Models;
 
 namespace WACesi_Maisons.repository
 {
     public class PromoRepository : IPromoRepository
     {
+        private readonly MySqlConnection _connection;
+
+        public PromoRepository(MySqlConnection connection)
+        {
+            _connection = connection;
+        }
         public List<Promo> GetAllPromos()
         {
-            List<Promo> allPromos = new List<Promo>();
-
             try
             {
-                allPromos = new List<Promo>
+                _connection.Open();
+                Console.WriteLine("Connexion réussie.");
+                using (MySqlCommand command = new MySqlCommand("SELECT * FROM PROMOTION", _connection))
                 {
-                    new Promo("coucou", "80", "Poisson"),
-                    new Promo("Kenny", "12", "AOE2"),
-                    new Promo("test", "50", "Hamster")
-                };
-            }
-            catch (Exception ex)
-            {
-                new Exception(ex.ToString());
-            }
+                    MySqlDataReader reader = command.ExecuteReader();
+                    List<Promo> promoList = new List<Promo>();
+                    while (reader.Read())
+                    {
+                        var promo = new Promo()
+                        {
+                            Nom = (string)reader["nom"],
+                            Score = (int)reader["score"],
+                            Logo = (string)reader["logo"],
+                            Pseudo = (string)reader["pseudo"],
+                            Code = (string)reader["pseudo"]
 
-            return allPromos;
+                        };
+                        promoList.Add(promo);
+                    }
+                    _connection.Close();
+                    var result = promoList;
+                    return result;
+                }
+            }
+            catch (MySqlException e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }

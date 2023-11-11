@@ -3,14 +3,12 @@
     public class Promo
     {
         public string Nom { get; set; }
-        public string Score { get; set; }
+        public int Score { get; set; }
         public string Logo { get; set; }
+        public string Code { get; set; }
+        public string Pseudo { get; set; }
+        public string Couleur { get; set; }
         
-        public Promo(string nom, string score, string logo)
-        {
-            this.Nom = nom;
-            this.Score = score;
-            this.Logo = logo;
-        }
+
     }
 }
