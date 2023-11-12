@@ -1,8 +1,6 @@
-using System.Data.SqlClient;
-using WACesi_Maisons.repository;
-using Microsoft.Extensions.Configuration;
-using WACesi_Maisons.Models;
 using MySql.Data.MySqlClient;
+using WACesi_Maisons.Models;
+using WACesi_Maisons.repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
