@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anthony\\Source\\Repos\\WACesi-Maisons2\\WACesi-Maisons\\WACesi-Maisons.csproj": {}
+    "C:\\Users\\anthony\\source\\repos\\WACesi-Maisons\\WACesi-Maisons\\WACesi-Maisons.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anthony\\Source\\Repos\\WACesi-Maisons2\\WACesi-Maisons\\WACesi-Maisons.csproj": {
+    "C:\\Users\\anthony\\source\\repos\\WACesi-Maisons\\WACesi-Maisons\\WACesi-Maisons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anthony\\Source\\Repos\\WACesi-Maisons2\\WACesi-Maisons\\WACesi-Maisons.csproj",
+        "projectUniqueName": "C:\\Users\\anthony\\source\\repos\\WACesi-Maisons\\WACesi-Maisons\\WACesi-Maisons.csproj",
         "projectName": "WACesi-Maisons",
-        "projectPath": "C:\\Users\\anthony\\Source\\Repos\\WACesi-Maisons2\\WACesi-Maisons\\WACesi-Maisons.csproj",
+        "projectPath": "C:\\Users\\anthony\\source\\repos\\WACesi-Maisons\\WACesi-Maisons\\WACesi-Maisons.csproj",
         "packagesPath": "C:\\Users\\anthony\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anthony\\Source\\Repos\\WACesi-Maisons2\\WACesi-Maisons\\obj\\",
+        "outputPath": "C:\\Users\\anthony\\source\\repos\\WACesi-Maisons\\WACesi-Maisons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anthony\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.2.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
