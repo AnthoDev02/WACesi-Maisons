@@ -15,7 +15,6 @@ namespace WACesi_Maisons.repository
         {
             try
             {
-                //test
                 _connection.Open();
                 Console.WriteLine("Connexion réussie.");
                 using (MySqlCommand command = new MySqlCommand("SELECT * FROM PROMOTION", _connection))
