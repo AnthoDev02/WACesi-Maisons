@@ -22,6 +22,7 @@ builder.Services.AddCors();
 
 //Dependency injection
 builder.Services.AddScoped<IPromoRepository, PromoRepository>();
+builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
 builder.Services.AddTransient(provider =>
 {
     return new MySqlConnection(connectionString);
