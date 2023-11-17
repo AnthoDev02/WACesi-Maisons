@@ -29,7 +29,8 @@ namespace WACesi_Maisons.repository
                             Score = (int)reader["score"],
                             Logo = (string)reader["logo"],
                             Pseudo = (string)reader["pseudo"],
-                            Code = (string)reader["pseudo"]
+                            Code = (string)reader["pseudo"],
+                            Couleur = (string)reader["couleur"]
 
                         };
                         promoList.Add(promo);

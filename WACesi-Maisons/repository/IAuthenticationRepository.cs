@@ -5,6 +5,6 @@ namespace WACesi_Maisons.repository
     public interface IAuthenticationRepository
     {
         public bool CheckAuthentication(Credentials credentials);
-        //public string DecodePassword(string password);
+        public bool TryRegistered(User userInfos);
     }
 }
